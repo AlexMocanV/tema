@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    float a,m,nrdezecimale;
+    cin>>a>>nrdezecimale;
+    m=double(1/a);
+    m=m*pow(10,nrdezecimale);
+    m=int(m);
+    m=double(m*pow(10,-nrdezecimale));
+    cout<<m;
+    return 0;
+}
