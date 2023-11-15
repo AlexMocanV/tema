@@ -35,3 +35,48 @@ int main()
     }
     return 0;
 }
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,cnt,i,cp,cc,c,p,cif,k1,k2;
+    cin>>n;
+    for(i=1;i<=n-1;i++)
+    {
+        p=i*i;
+        c=i*i*i;
+        cnt=0;
+        cout<<"numarul"<<i<<"are cifrele comune";
+        for(cif=0;cif<=9;cif++)
+        {
+            cp=p;
+            cc=c;
+            k1=0;
+            k2=0;
+            while(cp>0)
+            {
+                if(cif==cp%10)
+                {
+                    k1++;
+                }
+                cp=cp/10;
+            }
+            while(cc>0)
+            {
+                    if(cif==cc%10)
+                    {
+                        k2++;
+                    }
+                    cc=cc/10;
+            }
+            if(k1==0&&k2==0)
+            {
+                cout<<cif<<endl;
+            }
+            cnt++;
+        }
+    }
+    return 0;
+}
